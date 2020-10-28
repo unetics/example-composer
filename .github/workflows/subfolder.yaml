@@ -1,0 +1,14 @@
+name: Subfolder
+
+on: [push]
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        uses: php-actions/composer@master
+        with:
+          working_dir: subfolder/sub-subfolder

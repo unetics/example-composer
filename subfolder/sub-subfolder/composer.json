@@ -4,5 +4,9 @@
 
 	"require": {
 		"phpgt/webengine": "dev-master"
+	},
+
+	"scripts": {
+		"post-install-cmd": "echo installed in subfolder $(pwd)"
 	}
 }
