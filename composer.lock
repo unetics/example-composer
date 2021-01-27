@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9108035c14d2493ac0e8ede121a16bec",
+    "content-hash": "107e9a785b7d40a80a1c3364f9d6cf56",
     "packages": [
         {
             "name": "composer/semver",
@@ -193,8 +193,14 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://g105b:e020ca1e540f6ba3bc26e8d447d399f99f489376@github.com/php-actions/example-private-repo",
+                "url": "git@github.com:php-actions/example-private-repo.git",
                 "reference": "e7f9c74d461b820aecaf5ed7a668e03951b692fe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-actions/example-private-repo/zipball/e7f9c74d461b820aecaf5ed7a668e03951b692fe",
+                "reference": "e7f9c74d461b820aecaf5ed7a668e03951b692fe",
+                "shasum": ""
             },
             "type": "library",
             "autoload": {
@@ -203,6 +209,10 @@
                 }
             },
             "description": "This repo is private, used within example-composer.",
+            "support": {
+                "source": "https://github.com/php-actions/example-private-repo/tree/master",
+                "issues": "https://github.com/php-actions/example-private-repo/issues"
+            },
             "time": "2020-08-12T13:00:17+00:00"
         },
         {
