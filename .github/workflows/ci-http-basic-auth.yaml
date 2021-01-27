@@ -1,0 +1,18 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Add HTTP basic auth credentials
+        run: echo "${{ secrets.COMPOSER_AUTH_JSON }}" > $GITHUB_WORKSPACE/auth.json
+
+      - name: Install dependencies
+        uses: php-actions/composer@php-build-update
+        with:
+          php_version: 8.0
