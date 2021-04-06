@@ -10,6 +10,6 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Validate dependencies
-        uses: php-actions/composer@v5
+        uses: php-actions/composer@april-2021-issue
         with:
           command: validate
