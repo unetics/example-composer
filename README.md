@@ -1,4 +1,4 @@
-An example project that uses [php-actions/composer][composer-link]
+An forked example project that uses [php-actions/composer][composer-link]
 ===
 
 This is a trivial project that holds only simple example functionality: a repository that installs its dependencies (a WebEngine application) plus a private repository. The private repository is hosted on Github at https://github.com/php-actions/example-private-repo (the link will return 404 due to it being private).
