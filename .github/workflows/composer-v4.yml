@@ -14,3 +14,27 @@ jobs:
         with:
           composer_version: 1
           php_version: 8.0
+      - name: Step 1 - Create a temporary artifact downloads folder
+        run: mkdir build
+        
+      - name: step 2 - Add artifacts to publish to the temp folder
+        run: |
+          cd build
+          echo 'alpha'    > alpha.html
+          echo 'bravo'    > bravo.html
+          echo 'charlie'  > charlie.html
+          cd ..
+      - uses: papeloto/action-zip@v1
+        with:
+            files: build/ build2/ composer.lock
+            recursive: false
+            dest: build.zip
+
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          prerelease: false
+          automatic_release_tag: "latest"
+          title: "Development Build"
+          files: |
+            build.zip
